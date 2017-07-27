@@ -1,12 +1,11 @@
 
-Cloud4RPi Examples for [Onion Omega2](https://www.indiegogo.com/projects/omega2-5-linux-computer-with-wi-fi-made-for-iot)
+Cloud4RPi Examples for [Onion Omega2](https://onion.io/omega2/)
 =========================================================================================================================
 
 [![Build Status](https://travis-ci.org/cloud4rpi/omega2-examples.svg?branch=master)](https://travis-ci.org/cloud4rpi/omega2-examples)
 
-* [LED Blinking](led.py)
-* [GPIO/RGB LED Control](rgb_led.py) ([Expansion Dock](https://onion.io/store/expansion-dock/) required for RGB LED)
-
+* [Onboard LED control](led.py)
+* [Input/Output Control](rgb_led.py) (using [RGB LED](https://docs.onion.io/omega2-docs/expansion-dock.html#rgb-led) pins)
 
 ## See Also
 
