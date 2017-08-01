@@ -2,10 +2,12 @@
 #
 # Cloud4RPi Example for Omega2
 # ============================
-# 
-# This example demonstrates how to use Cloud4RPi service to control the Omega2 onboard LED.
-# 
-# For complete instructions on how to run this example, refer to the [How To](https://cloud4rpi.github.io/docs/howto/) article.
+#
+# This example demonstrates how to use Cloud4RPi service to control
+# the Omega2 onboard LED.
+#
+# For complete instructions on how to run this example, refer
+# to the [How To](https://cloud4rpi.github.io/docs/howto/) article.
 
 
 from os import uname
