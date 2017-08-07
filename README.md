@@ -23,7 +23,7 @@ Cloud4RPi Examples for [Onion Omega2](https://onion.io/omega2/)
     wget $repo"/omega2.py" $repo"/led.py" $repo"/rgb_led.py"
     ```
 
-    > If you prefer using **git** and the amount of free memory on your board allows that, install **git** and clone this repository with the `opkg install git git-http && git clone https://github.com/cloud4rpi/cloud4rpi-omega2-python.git && cd cloud4rpi-omega2-python` command.
+    > If you prefer using **git** and the amount of free memory on your board allows that, install **git** and clone this repository with the `opkg install git git-http ca-bundle && git clone https://github.com/cloud4rpi/cloud4rpi-omega2-python.git && cd cloud4rpi-omega2-python` command.
 
 4. [Log into your Cloud4RPi account](https://cloud4rpi.io/auth) or [create a new one](https://cloud4rpi.io/auth/signup).
 5. Copy the **Device Token** of [your device](https://cloud4rpi.io/devices). If you have no devices yet, create one on the [Devices](https://cloud4rpi.io/devices) page and copy its **Device Token**.
