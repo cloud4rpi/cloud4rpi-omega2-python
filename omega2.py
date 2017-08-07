@@ -11,7 +11,7 @@ class Omega2(object):
         self.RGB_pins = {'R': '17', 'G': '16', 'B': '15'}
 
         # https://docs.onion.io/omega2-docs/using-gpios.html
-        # NOTE: fast-gpio goes not support reading the value of output pin
+        # NOTE: fast-gpio does not support reading the value of an output pin
         self._gpio_tool = ['gpioctl', 'fast-gpio'][0]
 
     def _shell(self, cmd_args, check_output=False):
