@@ -27,7 +27,7 @@ Cloud4RPi Examples for [Onion Omega2](https://onion.io/omega2/)
 
 4. [Log into your Cloud4RPi account](https://cloud4rpi.io/auth) or [create a new one](https://cloud4rpi.io/auth/signup).
 5. Copy the **Device Token** of [your device](https://cloud4rpi.io/devices). If you have no devices yet, create one on the [Devices](https://cloud4rpi.io/devices) page and copy its **Device Token**.
-6. Replace the `__YOUR_DEVICE_TOKEN__` string in the [led.py](https://github.com/cloud4rpi/cloud4rpi-omega2-python/blob/master/led.py) file with your device token using any text editor (**nano**, **vim**, **sed** or other):
+6. Replace the `__YOUR_DEVICE_TOKEN__` string in the [led.py](https://github.com/cloud4rpi/cloud4rpi-omega2-python/blob/master/led.py) file with your device token using any text editor (**vim**, **sed** or other):
     ```sh
     sed -i 's/__YOUR_DEVICE_TOKEN__/replace-this-text-with-your-real-device-token/' led.py
     ```
