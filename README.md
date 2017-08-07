@@ -11,7 +11,7 @@ Cloud4RPi Examples for [Onion Omega2](https://onion.io/omega2/)
     opkg install wget python python-pip
     pip install --upgrade setuptools pip
     ```
-2. Install the Cloud4RPi client Library:
+2. Install the Cloud4RPi client library:
     ```sh
     pip install cloud4rpi
     ```
