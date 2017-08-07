@@ -42,7 +42,7 @@ Cloud4RPi Examples for [Onion Omega2](https://onion.io/omega2/)
 You can use this control panel to swich the state of the [onboard LED](https://docs.onion.io/omega2-docs/the-omega-led.html).
 
 
-> If you have an [Expansion Dock](https://docs.onion.io/omega2-docs/expansion-dock.html), run the `rgb_led.py` example to control the RGB LED on this dock.
+> If you have an [Expansion Dock](https://docs.onion.io/omega2-docs/expansion-dock.html), run the `rgb_led.py` example to control the dock's RGB LED.
 
 ## See Also
 
