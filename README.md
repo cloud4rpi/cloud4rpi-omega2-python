@@ -7,7 +7,6 @@ Cloud4RPi Examples for [Onion Omega2](https://onion.io/omega2/)
 
 1. Update your system and make sure you have the latest versions of all required software:
     ```sh
-    oupgrade
     opkg update
     opkg install wget python python-pip
     pip install --upgrade setuptools pip
