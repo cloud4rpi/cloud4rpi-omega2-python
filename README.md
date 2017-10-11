@@ -48,5 +48,6 @@ You can use this control panel to switch the [onboard LED](https://docs.onion.io
 
 * [Examples for Raspberry Pi](https://github.com/cloud4rpi/cloud4rpi-raspberrypi-python)
 * [Examples for Next Thing Co. C.H.I.P.](https://github.com/cloud4rpi/cloud4rpi-chip-python)
+* [Examples for ESP8266](https://github.com/cloud4rpi/cloud4rpi-esp8266-micropython)
 * [Client Library](https://github.com/cloud4rpi/cloud4rpi)
 * [Documentation Repository](https://github.com/cloud4rpi/docs)
