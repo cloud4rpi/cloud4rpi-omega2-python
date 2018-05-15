@@ -28,6 +28,7 @@ def main():
     o2 = omega2.Omega2()
 
     # Put variable declarations here
+    # Available types: 'bool', 'numeric', 'string'
     variables = {
         'Omega LED': {
             'type': 'bool',
