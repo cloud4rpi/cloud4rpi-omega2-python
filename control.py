@@ -21,39 +21,45 @@ import omega2
 DEVICE_TOKEN = '__YOUR_DEVICE_TOKEN__'
 DATA_SENDING_INTERVAL = 30  # seconds
 
+
+class RGB_LED:
+    def __init__(self, omega2):
+        self.o2 = omega2
+        self.R, self.G, self.B = 0, 0, 0
+    
+    def init(self):
+	    for _, pin in self.o2.RGB_pins.items():
+	        self.o2.gpio_dir_out_1(pin)  # HIGH = OFF
+
+    def set_R(self, value):
+    	if value == self.R:
+    		return value
+        self.R = value
+        self.o2.RGB_color(self.R, self.G, self.B)
+        return value
+        
+    def set_G(self, value):
+    	if value == self.G:
+    		return value
+        self.G = value
+        self.o2.RGB_color(self.R, self.G, self.B)
+        return value
+
+    def set_B(self, value):
+    	if value == self.B:
+    		return value
+        self.B = value
+        self.o2.RGB_color(self.R, self.G, self.B)
+        return value
+
+
 o2 = omega2.Omega2()
-RGB_R, RGB_G, RGB_B = 255, 255, 255
-
-
-def RGB_init():
-    for _, pin in o2.RGB_pins.items():
-        o2.gpio_dir_out_1(pin)  # HIGH = OFF
-
-
-def RED_control(state):
-    global RGB_R, RGB_G, RGB_B
-    RGB_R = state
-    o2.RGB_color(state, RGB_G, RGB_B)
-    return state
-
-
-def GREEN_control(state):
-    global RGB_R, RGB_G, RGB_B
-    RGB_G = state
-    o2.RGB_color(RGB_R, state, RGB_B)
-    return state
-
-
-def BLUE_control(state):
-    global RGB_R, RGB_G, RGB_B
-    RGB_B = state
-    o2.RGB_color(RGB_R, RGB_G, state)
-    return state
+rgb = RGB_LED(o2)
 
 
 def main():
-    RGB_init()
-
+    rgb.init()
+	
     # Put variable declarations here
     variables = {
         'Omega LED': {
@@ -63,18 +69,18 @@ def main():
         },
         'RGB LED - Red': {
             'type': 'numeric',
-            'value': 255,
-            'bind': RED_control
+            'value': 0,
+            'bind': rgb.set_R
         },
         'RGB LED - Green': {
             'type': 'numeric',
-            'value': 255,
-            'bind': GREEN_control
+            'value': 0,
+            'bind': rgb.set_G
         },
         'RGB LED - Blue': {
             'type': 'numeric',
-            'value': 255,
-            'bind': BLUE_control
+            'value': 0,
+            'bind': rgb.set_B
         }
     }
 
