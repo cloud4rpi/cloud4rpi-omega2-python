@@ -22,9 +22,9 @@ DEVICE_TOKEN = '__YOUR_DEVICE_TOKEN__'
 DATA_SENDING_INTERVAL = 30  # seconds
 
 
-class RGB_LED:
-    def __init__(self, omega2):
-        self.o2 = omega2
+class RGB_LED(object):
+    def __init__(self, o2):
+        self.o2 = o2
         self.R, self.G, self.B = 0, 0, 0
 
     def init(self):
