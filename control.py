@@ -26,28 +26,28 @@ class RGB_LED:
     def __init__(self, omega2):
         self.o2 = omega2
         self.R, self.G, self.B = 0, 0, 0
-    
+
     def init(self):
-	    for _, pin in self.o2.RGB_pins.items():
-	        self.o2.gpio_dir_out_1(pin)  # HIGH = OFF
+        for _, pin in self.o2.RGB_pins.items():
+            self.o2.gpio_dir_out_1(pin)  # HIGH = OFF
 
     def set_R(self, value):
-    	if value == self.R:
-    		return value
+        if value == self.R:
+            return value
         self.R = value
         self.o2.RGB_color(self.R, self.G, self.B)
         return value
-        
+
     def set_G(self, value):
-    	if value == self.G:
-    		return value
+        if value == self.G:
+            return value
         self.G = value
         self.o2.RGB_color(self.R, self.G, self.B)
         return value
 
     def set_B(self, value):
-    	if value == self.B:
-    		return value
+        if value == self.B:
+            return value
         self.B = value
         self.o2.RGB_color(self.R, self.G, self.B)
         return value
@@ -59,7 +59,7 @@ rgb = RGB_LED(o2)
 
 def main():
     rgb.init()
-	
+
     # Put variable declarations here
     variables = {
         'Omega LED': {
