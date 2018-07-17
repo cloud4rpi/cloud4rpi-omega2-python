@@ -22,6 +22,7 @@ DEVICE_TOKEN = '__YOUR_DEVICE_TOKEN__'
 DATA_SENDING_INTERVAL = 30  # seconds
 
 o2 = omega2.Omega2()
+RGB_R, RGB_G, RGB_B = 255, 255, 255
 
 
 def RGB_init():
@@ -30,21 +31,24 @@ def RGB_init():
 
 
 def RED_control(state):
-    pin = o2.RGB_pins['R']
-    if o2.gpio_set(pin, not state):
-        return not o2.gpio_get(pin)
+    global RGB_R, RGB_G, RGB_B
+    RGB_R = state
+    o2.RGB_color(state, RGB_G, RGB_B)
+    return state
 
 
 def GREEN_control(state):
-    pin = o2.RGB_pins['G']
-    if o2.gpio_set(pin, not state):
-        return not o2.gpio_get(pin)
+    global RGB_R, RGB_G, RGB_B
+    RGB_G = state
+    o2.RGB_color(RGB_R, state, RGB_B)
+    return state
 
 
 def BLUE_control(state):
-    pin = o2.RGB_pins['B']
-    if o2.gpio_set(pin, not state):
-        return not o2.gpio_get(pin)
+    global RGB_R, RGB_G, RGB_B
+    RGB_B = state
+    o2.RGB_color(RGB_R, RGB_G, state)
+    return state
 
 
 def main():
@@ -58,18 +62,18 @@ def main():
             'bind': o2.led_control
         },
         'RGB LED - Red': {
-            'type': 'bool',
-            'value': False,
+            'type': 'numeric',
+            'value': 255,
             'bind': RED_control
         },
         'RGB LED - Green': {
-            'type': 'bool',
-            'value': False,
+            'type': 'numeric',
+            'value': 255,
             'bind': GREEN_control
         },
         'RGB LED - Blue': {
-            'type': 'bool',
-            'value': False,
+            'type': 'numeric',
+            'value': 255,
             'bind': BLUE_control
         }
     }
