@@ -23,8 +23,8 @@ DATA_SENDING_INTERVAL = 30  # seconds
 
 
 class RGB_LED(object):
-    def __init__(self, o2):
-        self.o2 = o2
+    def __init__(self, omega2_instance):
+        self.o2 = omega2_instance
         self.R, self.G, self.B = 0, 0, 0
 
     def init(self):
