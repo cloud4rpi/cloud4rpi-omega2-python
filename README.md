@@ -26,13 +26,13 @@ Cloud4RPi Examples for [Onion Omega2](https://onion.io/omega2/)
 
 4. [Log into your Cloud4RPi account](https://cloud4rpi.io/signin) or [create a new one](https://cloud4rpi.io/register).
 5. Copy [your device](https://cloud4rpi.io/devices)'s **Device Token**. If you have no devices, create one on the [Devices](https://cloud4rpi.io/devices) page and copy its **Device Token**.
-6. Replace the `__YOUR_DEVICE_TOKEN__` string in the [led.py](https://github.com/cloud4rpi/cloud4rpi-omega2-python/blob/master/led.py) file with your device token using any text editor (**vim**, **sed** or other):
+6. Replace the `__YOUR_DEVICE_TOKEN__` string in the [control.py](https://github.com/cloud4rpi/cloud4rpi-omega2-python/blob/master/control.py) file with your device token using any text editor (**vim**, **sed** or other):
     ```sh
-    sed -i 's/__YOUR_DEVICE_TOKEN__/replace-this-text-with-your-real-device-token/' led.py
+    sed -i 's/__YOUR_DEVICE_TOKEN__/replace-this-text-with-your-real-device-token/' control.py
     ```
-7. Run the `led.py` example:
+7. Run the `control.py` example:
     ```sh
-    python led.py
+    python control.py
     ```
 8. Notice that the [device](https://cloud4rpi.io/devices) went online and started sending data.
 9. Go to the [Control Panels](https://cloud4rpi.io/control-panels/) page and add a new control panel.
@@ -42,7 +42,7 @@ You can use this control panel to switch the [onboard LED](https://docs.onion.io
 
 ![](https://github.com/cloud4rpi/docs/raw/master/example-img/omega_led.png)
 
-> If you have an [Expansion Dock](https://docs.onion.io/omega2-docs/expansion-dock.html), run the `rgb_led.py` example to control the dock's RGB LED.
+> If you have an [Expansion Dock](https://docs.onion.io/omega2-docs/expansion-dock.html), bind three **Slider** widgets (from 0 fo 255) to `RGB LED` variables to control the dock's RGB LED color.
 
 ## See Also
 
