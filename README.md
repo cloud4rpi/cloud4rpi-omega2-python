@@ -1,5 +1,5 @@
 Cloud4RPi Examples for [Onion Omega2](https://onion.io/omega2/)
-=========================================================================================================================
+===============================================================
 
 [![Build Status](https://travis-ci.org/cloud4rpi/cloud4rpi-omega2-python.svg?branch=master)](https://travis-ci.org/cloud4rpi/cloud4rpi-omega2-python)
 
@@ -19,7 +19,7 @@ Cloud4RPi Examples for [Onion Omega2](https://onion.io/omega2/)
     ```sh
     mkdir cloud4rpi-omega2-python && cd cloud4rpi-omega2-python
     repo="https://raw.githubusercontent.com/cloud4rpi/cloud4rpi-omega2-python/master"
-    wget $repo"/omega2.py" $repo"/led.py" $repo"/rgb_led.py"
+    wget "$repo/omega2.py" "$repo/control.py"
     ```
 
     > You can install **git** if your board has sufficient memory and you prefer using it, and clone this repository with the `opkg install git git-http ca-bundle && git clone https://github.com/cloud4rpi/cloud4rpi-omega2-python.git && cd cloud4rpi-omega2-python` command.
