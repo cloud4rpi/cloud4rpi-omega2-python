@@ -3,7 +3,7 @@
 # Cloud4RPi Example for Omega2
 # ============================
 #
-# This example demonstrates how to use Cloud4RPi service to control a GPIO pin.
+# This example demonstrates how to use Cloud4RPi service to control Omega2 LEDs.
 #
 # For complete instructions on how to run this example, refer
 # to the [How To](https://cloud4rpi.github.io/docs/howto/) article.
