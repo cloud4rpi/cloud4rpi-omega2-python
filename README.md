@@ -44,6 +44,8 @@ You can use this control panel to switch the [onboard LED](https://docs.onion.io
 
 > If you have an [Expansion Dock](https://docs.onion.io/omega2-docs/expansion-dock.html), bind three **Slider** widgets (from 0 fo 255) to `RGB LED` variables to control the dock's RGB LED color.
 
+![](https://github.com/cloud4rpi/docs/raw/master/example-img/omega_rgb.png)
+
 ## See Also
 
 * [Examples for Raspberry Pi](https://github.com/cloud4rpi/cloud4rpi-raspberrypi-python)
