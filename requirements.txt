@@ -1,3 +1,4 @@
 cloud4rpi
 pycodestyle
-pylint
+pylint==1.5.6; python_version == '3.3'
+pylint; python_version != '3.3'
