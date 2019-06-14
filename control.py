@@ -3,7 +3,7 @@
 # Cloud4RPi Example for Omega2
 # ============================
 #
-# This example demonstrates how to use Cloud4RPi service to control a GPIO pin.
+# This example demonstrates how to use Cloud4RPi service to control Omega2 LEDs.
 #
 # For complete instructions on how to run this example, refer
 # to the [How To](https://cloud4rpi.github.io/docs/howto/) article.
@@ -21,34 +21,44 @@ import omega2
 DEVICE_TOKEN = '__YOUR_DEVICE_TOKEN__'
 DATA_SENDING_INTERVAL = 30  # seconds
 
+
+class RGB_LED(object):
+    def __init__(self, omega2_instance):
+        self.o2 = omega2_instance
+        self.R, self.G, self.B = 0, 0, 0
+
+    def init(self):
+        for _, pin in self.o2.RGB_pins.items():
+            self.o2.gpio_dir_out_1(pin)  # HIGH = OFF
+
+    def set_R(self, value):
+        if value == self.R:
+            return value
+        self.R = value
+        self.o2.RGB_color(self.R, self.G, self.B)
+        return value
+
+    def set_G(self, value):
+        if value == self.G:
+            return value
+        self.G = value
+        self.o2.RGB_color(self.R, self.G, self.B)
+        return value
+
+    def set_B(self, value):
+        if value == self.B:
+            return value
+        self.B = value
+        self.o2.RGB_color(self.R, self.G, self.B)
+        return value
+
+
 o2 = omega2.Omega2()
-
-
-def RGB_init():
-    for _, pin in o2.RGB_pins.items():
-        o2.gpio_dir_out_1(pin)  # HIGH = OFF
-
-
-def RED_control(state):
-    pin = o2.RGB_pins['R']
-    if o2.gpio_set(pin, not state):
-        return not o2.gpio_get(pin)
-
-
-def GREEN_control(state):
-    pin = o2.RGB_pins['G']
-    if o2.gpio_set(pin, not state):
-        return not o2.gpio_get(pin)
-
-
-def BLUE_control(state):
-    pin = o2.RGB_pins['B']
-    if o2.gpio_set(pin, not state):
-        return not o2.gpio_get(pin)
+rgb = RGB_LED(o2)
 
 
 def main():
-    RGB_init()
+    rgb.init()
 
     # Put variable declarations here
     variables = {
@@ -58,19 +68,19 @@ def main():
             'bind': o2.led_control
         },
         'RGB LED - Red': {
-            'type': 'bool',
-            'value': False,
-            'bind': RED_control
+            'type': 'numeric',
+            'value': 0,
+            'bind': rgb.set_R
         },
         'RGB LED - Green': {
-            'type': 'bool',
-            'value': False,
-            'bind': GREEN_control
+            'type': 'numeric',
+            'value': 0,
+            'bind': rgb.set_G
         },
         'RGB LED - Blue': {
-            'type': 'bool',
-            'value': False,
-            'bind': BLUE_control
+            'type': 'numeric',
+            'value': 0,
+            'bind': rgb.set_B
         }
     }
 
