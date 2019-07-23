@@ -19,7 +19,9 @@ import omega2
 # Put your device token here. To get the token,
 # sign up at https://cloud4rpi.io and create a device.
 DEVICE_TOKEN = '__YOUR_DEVICE_TOKEN__'
-DATA_SENDING_INTERVAL = 30  # seconds
+
+# Decrease this value for testing purposes.
+DATA_SENDING_INTERVAL = 300  # seconds
 
 
 class RGB_LED(object):
