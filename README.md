@@ -8,12 +8,12 @@ Cloud4RPi Examples for [Onion Omega2](https://onion.io/omega2/)
 1. Update your system and make sure you have the latest versions of all required software:
     ```sh
     opkg update
-    opkg install wget python python-pip
-    pip install --upgrade setuptools pip
+    opkg install wget python3 python3-pip
+    pip3 install --upgrade setuptools pip
     ```
 2. Install the Cloud4RPi client library:
     ```sh
-    pip install cloud4rpi
+    pip3 install cloud4rpi
     ```
 3. Download examples:
     ```sh
@@ -32,7 +32,7 @@ Cloud4RPi Examples for [Onion Omega2](https://onion.io/omega2/)
     ```
 7. Run the `control.py` example:
     ```sh
-    python control.py
+    python3 control.py
     ```
 8. Notice that the [device](https://cloud4rpi.io/devices) went online and started sending data.
 9. Go to the [Control Panels](https://cloud4rpi.io/control-panels/) page and add a new control panel.
