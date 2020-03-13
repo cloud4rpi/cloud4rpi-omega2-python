@@ -20,8 +20,7 @@ import omega2
 # sign up at https://cloud4rpi.io and create a device.
 DEVICE_TOKEN = '__YOUR_DEVICE_TOKEN__'
 
-# Decrease this value for testing purposes.
-DATA_SENDING_INTERVAL = 300  # seconds
+DATA_SENDING_INTERVAL = 60  # seconds
 
 
 class RGB_LED(object):
@@ -90,7 +89,8 @@ def main():
     diagnostics = {
         'Host': gethostname(),
         'Operating System': " ".join(uname()),
-        'Omega2 version': 'Omega2 Plus' if 'p' in o2.version else 'Omega2'
+        'Omega2 Version': 'Omega2 Plus' if 'p' in o2.version else 'Omega2',
+        'Client Version:': cloud4rpi.__version__
     }
 
     device = cloud4rpi.connect(DEVICE_TOKEN)
